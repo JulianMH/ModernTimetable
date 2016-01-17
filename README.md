@@ -14,6 +14,7 @@ No idea where to start? Here are some things that could be done:
 - migrating .resx files to .resw files to fix some odd compile issues
 - windows 10 compatibility (ideally as universal app)
 - nice UI for bigger screens
+- remove all german comments in the code or translate them to english
 - syncing data between clients
 
 ## License
