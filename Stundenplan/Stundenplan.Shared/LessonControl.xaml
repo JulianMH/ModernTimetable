@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="Stundenplan.LessonControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stundenplan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:commands="using:Stundenplan.Commands"
+    mc:Ignorable="d" x:Name="thisControl"
+    xmlns:design="using:Stundenplan.ViewModels.Design"
+    d:DataContext="{d:DesignInstance design:DesignLessonViewModel, IsDesignTimeCreatable=True}"
+    d:DesignHeight="60" Background="Black" 
+    d:DesignWidth="400">
+    <Grid Background="Transparent">
+        <local:MenuFlyoutService.MenuFlyout>
+            <MenuFlyout>
+                <MenuFlyoutItem Text="{Binding Strings.ContextMenuHomework, Source={StaticResource Strings}}" x:Name="HomeworkMenuFlyoutItem"
+                                Command="{Binding NavigateToHomeworkOverviewPageCommand, ElementName=thisControl}" CommandParameter="{Binding}"
+								Visibility="{Binding ThisWeekSubject.IsValidSubject, Converter={StaticResource BooleanVisibilityConverter}}"/>
+                <MenuFlyoutItem Text="{Binding Strings.ContextMenuEdit, Source={StaticResource Strings}}" x:Name="EditLessonMenuFlyoutItem" CommandParameter="{Binding}"
+                                Command="{Binding EditLessonCommand, ElementName=thisControl}"/>
+                <MenuFlyoutItem Text="{Binding Strings.ContextMenuDelete, Source={StaticResource Strings}}" x:Name="DeleteLessonMenuFlyoutItem" CommandParameter="{Binding}"
+                                Command="{Binding DeleteLessonCommand, ElementName=thisControl}"/>
+            </MenuFlyout>
+        </local:MenuFlyoutService.MenuFlyout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,8,6,14">
+            <TextBlock Text="{Binding LessonTime.Start, Converter={StaticResource LessonTimeSingleLineStartConverter}}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap"/>
+            <TextBlock Text="{Binding LessonTime.End, Converter={StaticResource LessonTimeSingleLineEndConverter}}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap"/>
+        </StackPanel>
+        <Grid Background="{Binding ThisWeekSubject.Color, Converter={StaticResource ColorCodeToBrushConverter}}" Grid.Column="1" Visibility="{Binding ThisWeekSubject.IsValidSubject, Converter={StaticResource BooleanVisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding ThisWeekSubject.Name}" Grid.ColumnSpan="3" Margin="8, 0, 8, 0" TextWrapping="NoWrap" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+
+            <TextBlock Text="{Binding ThisWeekRoom}" MaxWidth="80" TextWrapping="NoWrap" Margin="8,0,6,8" Style="{ThemeResource TitleTextBlockStyle}" Grid.Row="1"/>
+            <TextBlock Text="{Binding ThisWeekSubject.Teacher}" MaxWidth="140" TextWrapping="NoWrap" Margin="6,0,8,8" Style="{ThemeResource TitleTextBlockStyle}" Opacity="0.6"
+												Grid.Column="1" Grid.Row="1"/>
+
+            <BitmapIcon Foreground="{StaticResource ApplicationForegroundThemeBrush}"  Margin="6" Grid.Column="3" Grid.RowSpan="2" Width="32" Height="32" VerticalAlignment="Top"
+                        UriSource="Icons/HomeworkLarge.png"
+                        Visibility="{Binding UnfinishedHomework, Converter={StaticResource BooleanVisibilityConverter}}"/>
+        </Grid>
+
+        <BitmapIcon Foreground="{StaticResource ApplicationForegroundThemeBrush}" Margin="6" Width="24" Height="24" Grid.Column="1"
+                    UriSource="Icons/AB.png"
+											Visibility="{Binding IsChangingLesson, Converter={StaticResource BooleanVisibilityConverter}}"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    </Grid>
+</UserControl>

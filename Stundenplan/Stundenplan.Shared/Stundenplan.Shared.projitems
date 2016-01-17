@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ac0aa45a-0562-4ff0-a37c-2d521b9d37aa</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Stundenplan</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AppPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\CleanUpLessonTimesCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DeleteDateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DeleteHomeworkCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DeleteLessonCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\DeleteSubjectCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\EditDateCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\EditHomeworkCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\EditLessonCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\EditLessonTimeCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\EditSubjectCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\GoBackCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\HomeworkToggleDoneCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\NavigateToCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\NavigateToHomeworkOverviewPageCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ToggleEvenOddWeeksCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommandWithParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\WindowsRuntimeResourceManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\OrderByToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToDoneConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ColorCodeToBrushConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\DateTimeToTextConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\DictionaryStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\IsEqualVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\RepeatBehaviourTextConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\StringFormatConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\SubjectThatUseColorListConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateOverviewPage.xaml.cs">
+      <DependentUpon>DateOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EditDatePage.xaml.cs">
+      <DependentUpon>EditDatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EditHomeworkPage.xaml.cs">
+      <DependentUpon>EditHomeworkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EditLessonPage.xaml.cs">
+      <DependentUpon>EditLessonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EditLessonTimePage.xaml.cs">
+      <DependentUpon>EditLessonTimePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EditSubjectPage.xaml.cs">
+      <DependentUpon>EditSubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ErrorPage.xaml.cs">
+      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ExtendedListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GeneralDataEditor.xaml.cs">
+      <DependentUpon>GeneralDataEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)HomeworkOverviewPage.xaml.cs">
+      <DependentUpon>HomeworkOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemsHub.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LandscapeProgressView.xaml.cs">
+      <DependentUpon>LandscapeProgressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)LandscapeWeekView.xaml.cs">
+      <DependentUpon>LandscapeWeekView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)LessonControl.xaml.cs">
+      <DependentUpon>LessonControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MenuFlyoutService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SelectTimetablePage.xaml.cs">
+      <DependentUpon>SelectTimetablePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestPage.xaml.cs">
+      <DependentUpon>TestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TimetableIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TimetableSettingsPage.xaml.cs">
+      <DependentUpon>TimetableSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Abstract\DataViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DateOverviewPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DateViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DayOfWeekSettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DayViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignSelectTimetablePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignTimetableSettingsPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignDateOverviewPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignEditSubjectViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignEditLessonViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignHomeworkOverviewPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignLessonViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignProgressViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignMainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Design\DesignTimetable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditDatePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditHomeworkPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditLessonPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditLessonTimePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditSubjectPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\GeneralDataEditorPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeworkOverviewPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeworkViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LessonTimeViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LessonViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ProgressViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SelectTimetablePageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SubjectViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TimetableSettingsPageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)DateOverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EditDatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EditHomeworkPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EditLessonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EditLessonTimePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)EditSubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ErrorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)GeneralDataEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)HomeworkOverviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)LandscapeProgressView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)LandscapeWeekView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)LessonControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SelectTimetablePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TimetableSettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Common\ReadMe.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\AB.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\feature.email.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\feature.settings.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\Homework.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\HomeworkLarge.png" />
+    <None Include="$(MSBuildThisFileDirectory)Icons\Missing.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\Notes.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\Order.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\refresh.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\TurnLeft.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Icons\TurnRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)AppName\de-DE\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)AppName\en\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)AppName\pt-PT\Resources.resw" />
+  </ItemGroup>
+</Project>

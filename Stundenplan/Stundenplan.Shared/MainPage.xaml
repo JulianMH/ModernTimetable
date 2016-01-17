@@ -1,0 +1,137 @@
+﻿<local:AppPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stundenplan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:commands="using:Stundenplan.Commands"
+    xmlns:design="using:Stundenplan.ViewModels.Design"
+    x:Class="Stundenplan.MainPage"
+    mc:Ignorable="d" x:Name="thisPage"
+    d:DataContext="{d:DesignInstance design:DesignMainPageViewModel, IsDesignTimeCreatable=True}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <local:AppPage.Resources>
+        <commands:EditLessonCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" Day="{Binding SelectedItem, ElementName=MainHub, Mode=OneWay}" x:Key="EditLessonCommand"/>
+        <commands:DeleteLessonCommand x:Key="DeleteLessonCommand" NavigationFrame="{Binding Frame, ElementName=thisPage}"  Day="{Binding SelectedItem.DataContext, ElementName=MainHub, Mode=OneWay}"/>
+        <commands:NavigateToHomeworkOverviewPageCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" x:Key="NavigateToHomeworkOverviewPageCommand"/>
+        <commands:NavigateToCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" x:Key="NavigateToCommand"/>
+    </local:AppPage.Resources>
+
+
+    <local:AppPage.BottomAppBar>
+        <CommandBar x:Name="AppBar">
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="{Binding Strings.PageMainPageLessonTimeSubjects, Source={StaticResource Strings}}"
+                              Command="{StaticResource NavigateToCommand}" CommandParameter="GeneralDataEditor"/>
+
+                <AppBarButton Label="{Binding Strings.PageMainPageEvenOddWeeks, Source={StaticResource Strings}}" x:Name="EvenOddWeeksAppBarButton">
+                    <AppBarButton.Command>
+                        <commands:ToggleEvenOddWeeksCommand/>
+                    </AppBarButton.Command>
+                </AppBarButton>
+
+
+                <AppBarButton Label="{Binding Strings.PageMainPageSettings, Source={StaticResource Strings}}"
+                              Command="{StaticResource NavigateToCommand}" CommandParameter="TimetableSettingsPage"/>
+
+                <AppBarButton Label="{Binding Strings.PageMainPageSwitchTimetable, Source={StaticResource Strings}}"
+                              Visibility="{Binding Converter={StaticResource InverseBooleanVisibilityConverter}, Source={StaticResource IsTrialMode}}"
+                              Command="{StaticResource NavigateToCommand}" CommandParameter="SelectTimetablePage"/>
+
+                <AppBarButton Label="{Binding Strings.PageMainPageTrialVersion, Source={StaticResource Strings}}"
+                              Visibility="{Binding Converter={StaticResource BooleanVisibilityConverter}, Source={StaticResource IsTrialMode}}"
+                              Command="{StaticResource NavigateToCommand}" CommandParameter="TimetableSettingsPage?trial"/>
+
+                <AppBarButton Label="{Binding Strings.PageMainPageAbout, Source={StaticResource Strings}}"
+                              Command="{StaticResource NavigateToCommand}" CommandParameter="AboutPage"/>
+            </CommandBar.SecondaryCommands>
+            <AppBarButton Label="{Binding Strings.ApplicationBarHomework, Source={StaticResource Strings}}"
+        		Command="{StaticResource NavigateToCommand}" CommandParameter="HomeworkOverviewPage">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="/Icons/Homework.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+            <AppBarButton Label="{Binding Strings.ApplicationBarNotes, Source={StaticResource Strings}}"
+        		Command="{StaticResource NavigateToCommand}" CommandParameter="DateOverviewPage"
+        		Visibility="{Binding Converter={StaticResource InverseBooleanVisibilityConverter}, Source={StaticResource IsTrialMode}}">
+                <AppBarButton.Icon>
+                    <BitmapIcon UriSource="/Icons/Notes.png"/>
+                </AppBarButton.Icon>
+            </AppBarButton>
+
+
+            <AppBarButton Icon="Add" Label="{Binding Strings.ApplicationBarAdd, Source={StaticResource Strings}}" Command="{StaticResource EditLessonCommand}"/>
+        </CommandBar>
+    </local:AppPage.BottomAppBar>
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <local:ItemsHub x:Name="MainHub" Header="{Binding TimetableName}" ItemsSource="{Binding Days}" DefaultItem="{Binding DefaultDay}" >
+            <local:ItemsHub.ItemTemplate>
+                <DataTemplate>
+                    <local:ExtendedListView ItemsSource="{Binding Lessons}" ItemSelectedCommand="{StaticResource NavigateToHomeworkOverviewPageCommand}">
+                        <local:ExtendedListView.ItemTemplate>
+                            <DataTemplate>
+                                <local:LessonControl Margin="0,4" Width="320"  EditLessonCommand="{StaticResource EditLessonCommand}" DeleteLessonCommand="{StaticResource DeleteLessonCommand}"
+                                                    NavigateToHomeworkOverviewPageCommand="{StaticResource NavigateToHomeworkOverviewPageCommand}" />
+                            </DataTemplate>
+                        </local:ExtendedListView.ItemTemplate>
+                        <local:ExtendedListView.EmptyTemplate>
+                            <ControlTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock TextWrapping="Wrap" Style="{ThemeResource SubheaderTextBlockStyle}" Opacity="0.6" Text="{Binding Strings.PageMainPageEmptyList, Source={StaticResource Strings}}"/>
+                                    <Grid Grid.Row="2"
+										Visibility="{Binding Converter={StaticResource InverseBooleanVisibilityConverter}, Source={StaticResource IsTrialMode}}">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--Diese "Icons" Passt sich ans Aktuelle Theme an :)-->
+                                        <BitmapIcon Foreground="{StaticResource ApplicationForegroundThemeBrush}" Width="26" Height="36" Margin="8, 2" Grid.Row="0" Grid.Column="1" Opacity="0.6"
+											UriSource="/Icons/TurnLeft.png"/>
+                                        <BitmapIcon Foreground="{StaticResource ApplicationForegroundThemeBrush}" Width="26" Height="36" Margin="8, 2" Grid.Row="1" Grid.Column="1" Opacity="0.6"
+											UriSource="/Icons/TurnRight.png"/>
+
+                                        <TextBlock Grid.Row="0" Text="{Binding Strings.PageMainPageProgressView, Source={StaticResource Strings}}" Style="{ThemeResource SubheaderTextBlockStyle}" Opacity="0.6" VerticalAlignment="Center"/>
+                                        <TextBlock Grid.Row="1" Text="{Binding Strings.PageMainPageWeekView, Source={StaticResource Strings}}" Style="{ThemeResource SubheaderTextBlockStyle}" Opacity="0.6" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Grid>
+                            </ControlTemplate>
+                        </local:ExtendedListView.EmptyTemplate>
+                    </local:ExtendedListView>
+                </DataTemplate>
+            </local:ItemsHub.ItemTemplate>
+            <local:ItemsHub.ItemHeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding LocalizedName}" Style="{ThemeResource HeaderTextBlockStyle}"/>
+                        <BitmapIcon UriSource="/Icons/Notes.png" Width="48" Height="48" Tapped="NotesIcon_Tapped"
+							Visibility="{Binding IsEventToday, Converter={StaticResource BooleanVisibilityConverter}}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </local:ItemsHub.ItemHeaderTemplate>
+        </local:ItemsHub>
+        <local:LandscapeWeekView x:Name="LandscapeWeekView" Visibility="Collapsed"/>
+        <local:LandscapeProgressView x:Name="LandscapeProgressView" Visibility="Collapsed"/>
+
+
+
+
+    </Grid>
+
+
+</local:AppPage>

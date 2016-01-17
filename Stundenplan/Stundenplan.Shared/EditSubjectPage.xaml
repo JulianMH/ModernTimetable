@@ -1,0 +1,83 @@
+﻿<local:AppPage
+    x:Class="Stundenplan.EditSubjectPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stundenplan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:commands="using:Stundenplan.Commands"
+    mc:Ignorable="d" x:Name="thisPage"
+     xmlns:design="using:Stundenplan.ViewModels.Design"
+    d:DataContext="{d:DesignInstance design:DesignEditSubjectViewModel, IsDesignTimeCreatable=True}"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <commands:GoBackCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" x:Key="GoBackCommand"/>
+        <commands:DeleteSubjectCommand NavigationFrame="{Binding Frame, ElementName=thisPage}" GoBack="True" x:Key="DeleteSubjectCommand"/>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="{Binding Strings.AppNameUpperCase, Source={StaticResource Strings}}" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock Text="{Binding Strings.PageEditSubjectCaption, Source={StaticResource Strings}}" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="ContentPanel" Grid.Row="1" Margin="19,0,19,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Style="{StaticResource ControlHeaderTextBlockStyle}" Text="{Binding Strings.PageEditSubjectName, Source={StaticResource Strings}}"/>
+                <TextBox KeyDown="TextBox_KeyDown" Grid.Row="1" x:Name="NameTextBox" Text="{Binding Name, Mode=OneWay}"/>
+                <TextBlock Style="{StaticResource ControlHeaderTextBlockStyle}" Grid.Row="2" Text="{Binding Strings.PageEditSubjectTeacher, Source={StaticResource Strings}}"/>
+                <TextBox KeyDown="TextBox_KeyDown" Text="{Binding Teacher, Mode=TwoWay}" Grid.Row="3"/>
+
+                <TextBlock Style="{StaticResource ControlHeaderTextBlockStyle}" Grid.Row="4" Text="{Binding Strings.PageEditSubjectColor, Source={StaticResource Strings}}"/>
+                <CheckBox Grid.Row="5" Content="{Binding Strings.PageEditSubjectIsCustomColor, Source={StaticResource Strings}}" IsChecked="{Binding IsCustomColor, Mode=TwoWay}"/>
+                <ListView Grid.Row="6" Visibility="{Binding IsCustomColor, Converter={StaticResource BooleanVisibilityConverter}}" 
+                          SelectedItem="{Binding SelectedCustomColor, Mode=TwoWay}" 
+                         ScrollViewer.VerticalScrollBarVisibility="Disabled" ItemsSource="{Binding AvailableColors}">
+
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <Grid Margin="0,0,6,6" MaxWidth="76" >
+                                <Rectangle Height="76" Width="76" Fill="{Binding Color, Converter={StaticResource ColorCodeToBrushConverter}}"/>
+                              
+                                <SymbolIcon Height="32" Width="32" Foreground="{StaticResource ApplicationForegroundThemeBrush}" Visibility="{Binding IsSelected, Converter={StaticResource BooleanVisibilityConverter}}"
+                                            Symbol="Accept"/>
+                                <TextBlock Style="{ThemeResource BodyTextBlockStyle}" FontSize="12" Margin="5, 4" Padding="0" TextWrapping="NoWrap" Text="{Binding OtherSubjects}"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Label="{Binding Strings.ApplicationBarDone, Source={StaticResource Strings}}" Icon="Accept"
+                              Command="{StaticResource GoBackCommand}"/>
+                <AppBarButton Label="{Binding Strings.ApplicationBarDelete, Source={StaticResource Strings}}" Icon="Delete"
+                              Command="{StaticResource DeleteSubjectCommand}" CommandParameter="{Binding}"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+</local:AppPage>

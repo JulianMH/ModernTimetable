@@ -1,0 +1,33 @@
+﻿<local:AppPage
+    x:Class="Stundenplan.ErrorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stundenplan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Title Panel -->
+            <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Name="AppTitleTextBlock" Text="{Binding Strings.AppNameUpperCase, Source={StaticResource Strings}}" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock x:Uid="ErrorPageHeaderText" Text="{Binding Strings.PageErrorPageCaption, Source={StaticResource Strings}}" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            </StackPanel>
+
+            <!--TODO: Content should be placed within the following grid-->
+            <StackPanel Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0" Orientation="Vertical">
+            <TextBlock  Margin="0, 0,0, 6" Text="{Binding Strings.PageErrorPageFirst, Source={StaticResource Strings}}" TextWrapping="Wrap" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+            <TextBlock Margin="0, 6"  Text="{Binding Strings.PageErrorPageSecond, Source={StaticResource Strings}}" TextWrapping="Wrap" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+            <TextBlock Margin="0, 6"  Text="{Binding Strings.PageErrorPageThird, Source={StaticResource Strings}}" TextWrapping="Wrap" Style="{ThemeResource BaseTextBlockStyle}" Opacity="0.6"/>
+
+                <Button x:Uid="ErrorPageSendButton" Content="Yes, send error report!" HorizontalAlignment="Stretch" Click="ButtonSend_Click" />
+            <Button x:Uid="ErrorPageCloseButton" Content="No" HorizontalAlignment="Stretch"  Click="ButtonClose_Click" />
+            </StackPanel>
+    </Grid>
+</local:AppPage>

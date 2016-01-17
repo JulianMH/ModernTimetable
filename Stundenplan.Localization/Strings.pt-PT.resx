@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationBarAdd" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="ApplicationBarCleanUp" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="ApplicationBarDelete" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="ApplicationBarDone" xml:space="preserve">
+    <value>Concluido</value>
+  </data>
+  <data name="ApplicationBarHomework" xml:space="preserve">
+    <value>Trabalho de casa</value>
+  </data>
+  <data name="ApplicationBarNotes" xml:space="preserve">
+    <value>Marcações</value>
+  </data>
+  <data name="ApplicationBarReport" xml:space="preserve">
+    <value>Relatório</value>
+  </data>
+  <data name="ApplicationBarSave" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="ApplicationBarSort" xml:space="preserve">
+    <value>Ordenar</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Horário</value>
+  </data>
+  <data name="AppNameUpperCase" xml:space="preserve">
+    <value>HORÁRIO</value>
+  </data>
+  <data name="AppNavigationFailedWarning" xml:space="preserve">
+    <value>Após este erro, a aplicação tem que reiniciar. Pedimos desculpa por qualquer inconveniente.</value>
+  </data>
+  <data name="AppTrial" xml:space="preserve">
+    <value>Avaliação</value>
+  </data>
+  <data name="BooleanDone" xml:space="preserve">
+    <value>Concluido</value>
+  </data>
+  <data name="BooleanNotDone" xml:space="preserve">
+    <value>Não Concluido</value>
+  </data>
+  <data name="ContextMenuDelete" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="ContextMenuDownload" xml:space="preserve">
+    <value>Carregar para o dispositivo</value>
+  </data>
+  <data name="ContextMenuDublicate" xml:space="preserve">
+    <value>Duplicar</value>
+  </data>
+  <data name="ContextMenuEdit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="ContextMenuHomework" xml:space="preserve">
+    <value>Ver trabalho de casa</value>
+  </data>
+  <data name="ContextMenuOpen" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="ConvertHelpersDayOfWeekToStringException" xml:space="preserve">
+    <value>Este dia não existe:</value>
+  </data>
+  <data name="DateNew" xml:space="preserve">
+    <value>Nova Nota</value>
+  </data>
+  <data name="DateTimeFuture" xml:space="preserve">
+    <value>Futura</value>
+  </data>
+  <data name="DateTimePast" xml:space="preserve">
+    <value>Passada</value>
+  </data>
+  <data name="DateTimeThisMonth" xml:space="preserve">
+    <value>Este Mês</value>
+  </data>
+  <data name="DateTimeThisWeek" xml:space="preserve">
+    <value>Esta Semana</value>
+  </data>
+  <data name="DateTimeToday" xml:space="preserve">
+    <value>Hoje</value>
+  </data>
+  <data name="DateTimeTomorrow" xml:space="preserve">
+    <value>Amanhã</value>
+  </data>
+  <data name="LessonTimeMultiLineFormat" xml:space="preserve">
+    <value>{0:t}
+{1:t}</value>
+  </data>
+  <data name="LessonTimeNumberTextFormat" xml:space="preserve">
+    <value>{0}. Aula</value>
+  </data>
+  <data name="LessonTimeSingleLineEnd" xml:space="preserve">
+    <value>{0:t}</value>
+  </data>
+  <data name="LessonTimeSingleLineStart" xml:space="preserve">
+    <value>{0:t} -</value>
+  </data>
+  <data name="ListBoxEmptyStringDefault" xml:space="preserve">
+    <value>Esta lista está vazia.</value>
+  </data>
+  <data name="LoadSaveBackupFailed" xml:space="preserve">
+    <value>O horário não pode ser aberto, abrir um backup anterior também falhou.</value>
+  </data>
+  <data name="LoadSaveBackupLoaded" xml:space="preserve">
+    <value>O horário não pode ser aberto, pode restaurar a partir de um backup anterior.</value>
+  </data>
+  <data name="LoadSaveBackupNotFound" xml:space="preserve">
+    <value>Ficheiro Backup-XML não encontrado.</value>
+  </data>
+  <data name="LoadSaveOnlyBackupFailure" xml:space="preserve">
+    <value>Falha ao carregar o backup.</value>
+  </data>
+  <data name="LoadSaveOnlyBackupWarning" xml:space="preserve">
+    <value>Horário sem dados actualizados, está disp+onível um backup anterior. Deseja carregá-lo?</value>
+  </data>
+  <data name="LoadSaveOtherFailure" xml:space="preserve">
+    <value>Horário atual inexistente. Para evitar mais percas de dados não foi carregado outro horário.</value>
+  </data>
+  <data name="LoadSaveReport" xml:space="preserve">
+    <value>Hello,
+I am using {0} version {1} and the following error occurred:
+
+{2}
+
+Kind Regards.</value>
+  </data>
+  <data name="LoadSaveReportPrimaryErrorFormat" xml:space="preserve">
+    <value>First error: {0}
+Error message: {1}
+Error information: {2}
+</value>
+  </data>
+  <data name="LoadSaveReportSecondaryErrorFormat" xml:space="preserve">
+    <value>Second error: {0}
+Error message: {1}
+Error information: {2}
+</value>
+  </data>
+  <data name="LoadSaveReportSubject" xml:space="preserve">
+    <value>Timetable: I/O Error Report</value>
+  </data>
+  <data name="LoadSaveSaveErrorFormat" xml:space="preserve">
+    <value>Erro ao guardar: {0}</value>
+  </data>
+  <data name="LoadSaveWarningFormat" xml:space="preserve">
+    <value>{0}
+Agradecemos a sua comunicação de erro que nos ajudará a corrigir eventuais bug's numa futura versão.</value>
+  </data>
+  <data name="MessageBoxCriticalError" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="MessageBoxRemoveCaption" xml:space="preserve">
+    <value>Tem a certeza que deseja remover isto?</value>
+  </data>
+  <data name="MessageBoxWarningCaption" xml:space="preserve">
+    <value>Aviso</value>
+  </data>
+  <data name="PageDateOverviewCaption" xml:space="preserve">
+    <value>Marcações</value>
+  </data>
+  <data name="PageDateOverviewEmptyString" xml:space="preserve">
+    <value>Sem marcações.
+Prima + para adicionar!</value>
+  </data>
+  <data name="PageDateOverviewRemoveWarning" xml:space="preserve">
+    <value>Tem a certeza que deseja remover esta marcação?</value>
+  </data>
+  <data name="PageEditDateCaption" xml:space="preserve">
+    <value>marcações</value>
+  </data>
+  <data name="PageEditDateDate" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="PageEditDateName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="PageEditDateNotFound" xml:space="preserve">
+    <value>Marcação não encontrada.</value>
+  </data>
+  <data name="PageEditDateRepetition" xml:space="preserve">
+    <value>Intervalo</value>
+  </data>
+  <data name="PageEditHomeworkCaption" xml:space="preserve">
+    <value>Trabalho de casa</value>
+  </data>
+  <data name="PageEditHomeworkDescription" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="PageEditHomeworkFromDate" xml:space="preserve">
+    <value>Criado</value>
+  </data>
+  <data name="PageEditHomeworkNotFoundWarning" xml:space="preserve">
+    <value>Trabalho de casa não encontrado.</value>
+  </data>
+  <data name="PageEditHomeworkRemoveWarning" xml:space="preserve">
+    <value>Tem a certeza que deseja remover este trabalho de casa?</value>
+  </data>
+  <data name="PageEditHomeworkSubject" xml:space="preserve">
+    <value>Escolha desciplina</value>
+  </data>
+  <data name="PageEditHomeworkToDate" xml:space="preserve">
+    <value>Escolha a data limite</value>
+  </data>
+  <data name="PageEditLessonCaption" xml:space="preserve">
+    <value>editar</value>
+  </data>
+  <data name="PageEditLessonCustomTimes" xml:space="preserve">
+    <value>Tempos diferentes</value>
+  </data>
+  <data name="PageEditLessonHeader" xml:space="preserve">
+    <value>{0}, {1}</value>
+  </data>
+  <data name="PageEditLessonNewLessonTimeWarning" xml:space="preserve">
+    <value>Adicione tempos a uma aula adicional para prosseguir.</value>
+  </data>
+  <data name="PageEditLessonNewSubject" xml:space="preserve">
+    <value>Criar uma nova disciplina...</value>
+  </data>
+  <data name="PageEditLessonNotFoundWarning" xml:space="preserve">
+    <value>Aula inexistente!</value>
+  </data>
+  <data name="PageEditLessonOddWeeks" xml:space="preserve">
+    <value>Semanas impares diferentes</value>
+  </data>
+  <data name="PageEditLessonRoom" xml:space="preserve">
+    <value>Sala</value>
+  </data>
+  <data name="PageEditLessonSubject" xml:space="preserve">
+    <value>Escolha a disciplina</value>
+  </data>
+  <data name="PageEditLessonTimeEnd" xml:space="preserve">
+    <value>Escolha a hora de fim</value>
+  </data>
+  <data name="PageEditLessonTimeNotFoundWarning" xml:space="preserve">
+    <value>Tempo não encontrado!</value>
+  </data>
+  <data name="PageEditLessonTimeStart" xml:space="preserve">
+    <value>Escolha a hora de início</value>
+  </data>
+  <data name="PageEditSubjectCaption" xml:space="preserve">
+    <value>disciplina</value>
+  </data>
+  <data name="PageEditSubjectName" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="PageEditSubjectNameAlreadyUsedWarning" xml:space="preserve">
+    <value>Uma disciplina com esse nome já existe! O nome da disciplina não será alterado.</value>
+  </data>
+  <data name="PageEditSubjectNameNotAllowedWarning" xml:space="preserve">
+    <value>Esse nome está reservado! O nome da disciplina não será alterado.</value>
+  </data>
+  <data name="PageEditSubjectNeedsNameWarning" xml:space="preserve">
+    <value>O nome da disciplina tem que ser válido! O nome da disciplina não será alterado.</value>
+  </data>
+  <data name="PageEditSubjectNotFound" xml:space="preserve">
+    <value>Disciplina não encontrada!</value>
+  </data>
+  <data name="PageEditSubjectTeacher" xml:space="preserve">
+    <value>Professor</value>
+  </data>
+  <data name="PageErrorPageCaption" xml:space="preserve">
+    <value>erro</value>
+  </data>
+  <data name="PageErrorPageDataLostWarning" xml:space="preserve">
+    <value>Erro de perca de dados. Não é possível um relatório de erro.</value>
+  </data>
+  <data name="PageErrorPageFirst" xml:space="preserve">
+    <value>Pedimos desculpa! Este erro não deveria ter ocorrido.</value>
+  </data>
+  <data name="PageErrorPageNo" xml:space="preserve">
+    <value>Não enviar.</value>
+  </data>
+  <data name="PageErrorPageReport" xml:space="preserve">
+    <value>Hello,
+I am using {0} version {1} and the error {2} occurred:
+{3}
+A short description from me:
+
+
+
+
+Additional information:
+{4}
+Navigation:
+{5}
+
+Kind Regards.</value>
+  </data>
+  <data name="PageErrorPageReportSubject" xml:space="preserve">
+    <value>Timetable: Error report</value>
+  </data>
+  <data name="PageErrorPageSecond" xml:space="preserve">
+    <value>Agradecemos a sua comunicação de erro que nos ajudará a corrigir eventuais bug's numa futura versão.</value>
+  </data>
+  <data name="PageErrorPageThird" xml:space="preserve">
+    <value>Dados privados como o seu horário não serão incluidos no relatório. Podemos usar o seu e-mail para o contactar para mais questões sobre o erro.</value>
+  </data>
+  <data name="PageErrorPageYes" xml:space="preserve">
+    <value>Sim, enviar relatório de erro!</value>
+  </data>
+  <data name="PageGeneralDataEditorCleanUpLessonTimesWarningPlural" xml:space="preserve">
+    <value>Deseja remover {0} tempos não utilizados?</value>
+  </data>
+  <data name="PageGeneralDataEditorCleanUpLessonTimesWarningSingular" xml:space="preserve">
+    <value>Deseja remover um tempo não utilizado?</value>
+  </data>
+  <data name="PageGeneralDataEditorLessonTimeEmptyList" xml:space="preserve">
+    <value>Sem tempos.
+Prima + para adicionar!</value>
+  </data>
+  <data name="PageGeneralDataEditorLessonTimes" xml:space="preserve">
+    <value>Tempos</value>
+  </data>
+  <data name="PageGeneralDataEditorSubjectEmptyList" xml:space="preserve">
+    <value>Sem aulas.
+Prima + para adicionar!</value>
+  </data>
+  <data name="PageGeneralDataEditorSubjects" xml:space="preserve">
+    <value>disciplinas</value>
+  </data>
+  <data name="PageHomeworkOverviewAll" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="PageHomeworkOverviewByFromDate" xml:space="preserve">
+    <value>por data de criação</value>
+  </data>
+  <data name="PageHomeworkOverviewBySubject" xml:space="preserve">
+    <value>por disciplina</value>
+  </data>
+  <data name="PageHomeworkOverviewByToDate" xml:space="preserve">
+    <value>por data limite</value>
+  </data>
+  <data name="PageHomeworkOverviewFilter" xml:space="preserve">
+    <value>Ver trabalhos de casa por disciplinas</value>
+  </data>
+  <data name="PageHomeworkOverviewFilterFullMode" xml:space="preserve">
+    <value>Escolha a disciplina</value>
+  </data>
+  <data name="PageHomeworkOverviewNoSubjectWarning" xml:space="preserve">
+    <value>A disciplina tem que ser criada antes de adicionar um trabalho de casa.</value>
+  </data>
+  <data name="PageHomeworkOverviewOrder" xml:space="preserve">
+    <value>ESCOLHA A ORDEM</value>
+  </data>
+  <data name="PageHomeworkOverviewRemoveWarning" xml:space="preserve">
+    <value>Deseja remover esta tarefa?</value>
+  </data>
+  <data name="PageHomeworkOverviewSubject" xml:space="preserve">
+    <value>disciplina</value>
+  </data>
+  <data name="PageHomeworkOverviewSubjectEmptyList" xml:space="preserve">
+    <value>Disciplina sem trabalhos de casa.</value>
+  </data>
+  <data name="PageHomeworkOverviewToday" xml:space="preserve">
+    <value>hoje</value>
+  </data>
+  <data name="PageHomeworkOverviewTodayEmptyList" xml:space="preserve">
+    <value>Sem trabalhos de casa para hoje.</value>
+  </data>
+  <data name="PageHomeworkOverviewTomorrow" xml:space="preserve">
+    <value>amanhã</value>
+  </data>
+  <data name="PageHomeworkOverviewTomorrowEmptyList" xml:space="preserve">
+    <value>Sem trabalhos de casa até amanhã</value>
+  </data>
+  <data name="PageInfoPageCaption" xml:space="preserve">
+    <value>sobre</value>
+  </data>
+  <data name="PageInfoPageDesign" xml:space="preserve">
+    <value>Design</value>
+  </data>
+  <data name="PageInfoPageGraphics" xml:space="preserve">
+    <value>Gráficos</value>
+  </data>
+  <data name="PageInfoPageMailBody" xml:space="preserve">
+    <value>Hello,
+I am using {0} version {1} and I have a question or an idea for future versions:
+
+
+
+
+
+Many thanks!
+Kind Regards.</value>
+  </data>
+  <data name="PageInfoPageMailSubject" xml:space="preserve">
+    <value>{0}: Questions and Ideas</value>
+  </data>
+  <data name="PageInfoPageProgramming" xml:space="preserve">
+    <value>Programação</value>
+  </data>
+  <data name="PageInfoPageRate" xml:space="preserve">
+    <value>Avaliação</value>
+  </data>
+  <data name="PageInfoPageSupportMail" xml:space="preserve">
+    <value>E-mail do suporte</value>
+  </data>
+  <data name="PageInfoPageVersion" xml:space="preserve">
+    <value>Versão {0}</value>
+  </data>
+  <data name="PageLandscapeViewCaption" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="PageLandscapeViewFreeTime" xml:space="preserve">
+    <value>tempo livre</value>
+  </data>
+  <data name="PageLandscapeViewNoLesson" xml:space="preserve">
+    <value>Sem aulas.</value>
+  </data>
+  <data name="PageLandscapeViewRemainingTimeFormat" xml:space="preserve">
+    <value>{0}:{1:00}:{2:00} de tempo restante.</value>
+  </data>
+  <data name="PageLandscapeViewRemainingTimeUnknown" xml:space="preserve">
+    <value>tempo restante desconhecido.</value>
+  </data>
+  <data name="PageLandscapeWeekViewCaptionFormat" xml:space="preserve">
+    <value>HORÁRIO - {0}. CALENDÁRIO SEMANAL</value>
+  </data>
+  <data name="PageLandscapeWeekViewTimes" xml:space="preserve">
+    <value>Tempos</value>
+  </data>
+  <data name="PageMainPageAbout" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="PageMainPageEmptyList" xml:space="preserve">
+    <value>Sem aulas.
+Prima + para adicionar!</value>
+  </data>
+  <data name="PageMainPageEvenOddWeeks" xml:space="preserve">
+    <value>Semanas - Pares / Impares</value>
+  </data>
+  <data name="PageMainPageLessonTimeSubjects" xml:space="preserve">
+    <value>Editar tempos e disciplinas</value>
+  </data>
+  <data name="PageMainPageProgressView" xml:space="preserve">
+    <value>Vista momentânea</value>
+  </data>
+  <data name="PageMainPageSettings" xml:space="preserve">
+    <value>Definições</value>
+  </data>
+  <data name="PageMainPageShowEvenWeeks" xml:space="preserve">
+    <value>Ver semanas pares</value>
+  </data>
+  <data name="PageMainPageShowOddWeeks" xml:space="preserve">
+    <value>Ver semanas impares</value>
+  </data>
+  <data name="PageMainPageSwitchTimetable" xml:space="preserve">
+    <value>Alterar horário</value>
+  </data>
+  <data name="PageMainPageTrialVersion" xml:space="preserve">
+    <value>O que tem a versão completa?</value>
+  </data>
+  <data name="PageMainPageWeekView" xml:space="preserve">
+    <value>Vista semanal</value>
+  </data>
+  <data name="PageSelectTimetableActiveChangedFormat" xml:space="preserve">
+    <value>{0} é o horário atual.</value>
+  </data>
+  <data name="PageSelectTimetableCaption" xml:space="preserve">
+    <value>gerir</value>
+  </data>
+  <data name="PageSelectTimetableCurrent" xml:space="preserve">
+    <value>Horário atual:</value>
+  </data>
+  <data name="PageSelectTimetableDeleteSkyDriveWarning" xml:space="preserve">
+    <value>Deseja remover o horário {0} do seu SkyDrive?</value>
+  </data>
+  <data name="PageSelectTimetableDeleteWarning" xml:space="preserve">
+    <value>Deseja remover o horário {0} com todas as disciplinas, trabalhos de casa e datas?</value>
+  </data>
+  <data name="PageSelectTimetableEmptyList" xml:space="preserve">
+    <value>Sem outros horários.
+Prima + para criar um novo.</value>
+  </data>
+  <data name="PageSelectTimetableNamingFormat" xml:space="preserve">
+    <value>Horário {0}</value>
+  </data>
+  <data name="PageSelectTimetableOther" xml:space="preserve">
+    <value>Outros horários:</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveCaption" xml:space="preserve">
+    <value>SkyDrive</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveDisconnected" xml:space="preserve">
+    <value>Sem ligação.</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveLoading" xml:space="preserve">
+    <value>Carregando horários...</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveReadyEmtpyString" xml:space="preserve">
+    <value>Sem horários disponíveis.
+Horários são guardados na pasta 'Timetables' do SkyDrive.</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveSubCaption" xml:space="preserve">
+    <value>Horários guardados na pasta 'Timetables' do SkyDrive:</value>
+  </data>
+  <data name="PageSelectTimetableSkyDriveWait" xml:space="preserve">
+    <value>Espere...</value>
+  </data>
+  <data name="PageSelectTimetableUpload" xml:space="preserve">
+    <value>UPLOAD</value>
+  </data>
+  <data name="PageTimetableSettingsCustomTimes" xml:space="preserve">
+    <value>Tempos diferem em algumas aulas</value>
+  </data>
+  <data name="PageTimetableSettingsCustomTimesInfo" xml:space="preserve">
+    <value>A vista semanal pode não funcionar corretamente com este parâmetro activo.</value>
+  </data>
+  <data name="PageTimetableSettingsGeneral" xml:space="preserve">
+    <value>geral</value>
+  </data>
+  <data name="PageTimetableSettingsLiveTile" xml:space="preserve">
+    <value>Ativar Live Tile</value>
+  </data>
+  <data name="PageTimetableSettingsLiveTileDescription" xml:space="preserve">
+    <value>Atualizações do live tile.</value>
+  </data>
+  <data name="PageTimetableSettingsLiveTileDisabledWarning" xml:space="preserve">
+    <value>As funções de background para o Horário estão desativadas nas definições do dispositivo.</value>
+  </data>
+  <data name="PageTimetableSettingsTimes" xml:space="preserve">
+    <value>Tempos</value>
+  </data>
+  <data name="PageTimetableSettingsTimetableName" xml:space="preserve">
+    <value>Nome do horário</value>
+  </data>
+  <data name="PageTimetableSettingsTrial" xml:space="preserve">
+    <value>versão completa</value>
+  </data>
+  <data name="PageTimetableSettingsTrialDescription" xml:space="preserve">
+    <value>Compre a versão completa sem publicidade com as seguintes funções:
+Vista semanl e por disciplina
+- Marcações
+- Múltiplos horários
+- SkyDrive</value>
+  </data>
+  <data name="PageTimetableSettingsTrialOpenStore" xml:space="preserve">
+    <value>Ver na loja</value>
+  </data>
+  <data name="PageTimetableSettingsWeekDays" xml:space="preserve">
+    <value>dias da semana</value>
+  </data>
+  <data name="PageTimetableSettingsWeekDaysWarning" xml:space="preserve">
+    <value>Pelo menos um dia da semana tem que estar ativo. A alteração aos dias da semana não serão guaradas.</value>
+  </data>
+  <data name="PageTitleDates" xml:space="preserve">
+    <value>HORÁRIO - MARCAÇÕES</value>
+  </data>
+  <data name="PageTitleHomework" xml:space="preserve">
+    <value>HORÁRIO - TRABALHOS DE CASA</value>
+  </data>
+  <data name="PageTitleSettings" xml:space="preserve">
+    <value>HORÁRIO - DEFINIÇÕES</value>
+  </data>
+  <data name="RepeatBehaviourMonthly" xml:space="preserve">
+    <value>Todos os meses</value>
+  </data>
+  <data name="RepeatBehaviourNone" xml:space="preserve">
+    <value>Uma vez</value>
+  </data>
+  <data name="RepeatBehaviourWeekly" xml:space="preserve">
+    <value>Todas as semanas</value>
+  </data>
+  <data name="SkyDriveHelperErrorWarning" xml:space="preserve">
+    <value>Ligação ao seu SkyDrive indisponível. Verifique se está ligado à internet. Tente mais tarde. Erro: {0}</value>
+  </data>
+  <data name="SkyDriveHelperException" xml:space="preserve">
+    <value>A ligação ao seu SkyDrive não está disponível.</value>
+  </data>
+  <data name="SubjectFreeTime" xml:space="preserve">
+    <value>periodo livre</value>
+  </data>
+  <data name="SubjectNewFormat" xml:space="preserve">
+    <value>Nova disciplina {0}</value>
+  </data>
+  <data name="TimetableDescriptionInvalidTimetable" xml:space="preserve">
+    <value>Horário incorreto</value>
+  </data>
+  <data name="TimetableDescriptionNoName" xml:space="preserve">
+    <value>Horário (Sem nome)</value>
+  </data>
+  <data name="TimetableGetListedLessonsException" xml:space="preserve">
+    <value>É suposto mover o tempo para o seguinte, não para o anterior.</value>
+  </data>
+  <data name="TimetableLoadParseException" xml:space="preserve">
+    <value>Não é possível ler o ficheiro Timetable-XML.</value>
+  </data>
+  <data name="TimetableLoadReadException" xml:space="preserve">
+    <value>Não é possível ler o ficheiro Timetable-XML no dispositivo.</value>
+  </data>
+  <data name="TimetableNewName" xml:space="preserve">
+    <value>Horário</value>
+  </data>
+  <data name="TimetableRemoveSubjectWarningPluralFormat" xml:space="preserve">
+    <value>{1} aulas têm atribuida a disciplina ("{0}"). Tem a certeza que deseja eliminar?</value>
+  </data>
+  <data name="TimetableRemoveSubjectWarningSingularFormat" xml:space="preserve">
+    <value>Uma aula tem atribuida a disciplina("{0}"). Tem a certeza que deseja eliminar?</value>
+  </data>
+  <data name="TimetableReportBody" xml:space="preserve">
+    <value>Horário: {0}
+
+Trabalhos de casa: {1}
+
+Marcações: {2}</value>
+  </data>
+  <data name="TimetableReportDate" xml:space="preserve">
+    <value>- {0}: {1}</value>
+  </data>
+  <data name="TimetableReportHomework" xml:space="preserve">
+    <value>- {0}, fazer antes {1} (Criado {2}): {3}</value>
+  </data>
+  <data name="TimetableReportNone" xml:space="preserve">
+    <value>Vazio.</value>
+  </data>
+  <data name="TimetableReportSubject" xml:space="preserve">
+    <value>HORÁRIO - RELATÓRIO, {0}</value>
+  </data>
+  <data name="TimetableSaveFileInnerSaveException" xml:space="preserve">
+    <value>Não é possivel guardar o ficheiro Timetable-XML no dispositivo.</value>
+  </data>
+  <data name="TimetableSaveFileInnerXmlException" xml:space="preserve">
+    <value>Não é possivel criar o conteúdo do ficheiro Timetable-XML.</value>
+  </data>
+  <data name="TimetableSaveToFileBackupException" xml:space="preserve">
+    <value>Erro no Backup. O horário atual não será guardado para prevenir mais percas de dados.</value>
+  </data>
+  <data name="TileMediumFreeTime" xml:space="preserve">
+    <value>tempo livre
+{0:ddd} </value>
+  </data>
+  <data name="TileMediumLesson" xml:space="preserve">
+    <value>{0:t}
+{1}
+</value>
+  </data>
+  <data name="TileWideDatesPlural" xml:space="preserve">
+    <value>{0} Marcações</value>
+  </data>
+  <data name="TileWideDatesSingular" xml:space="preserve">
+    <value>{0} Marcação</value>
+  </data>
+  <data name="TileWideFreeTime" xml:space="preserve">
+    <value>tempo livre
+{0:ddd} </value>
+  </data>
+  <data name="TileWideHomeworkPlural" xml:space="preserve">
+    <value>{0} trabalhos de casa</value>
+  </data>
+  <data name="TileWideHomeworkSingular" xml:space="preserve">
+    <value>{0} trabalho de casa</value>
+  </data>
+  <data name="TileWideLesson" xml:space="preserve">
+    <value>{0:t} - {1:t} {2} {3}
+</value>
+  </data>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>pt-PT</value>
+  </data>
+  <data name="PageAboutPageTranslation" xml:space="preserve">
+    <value>Tradução</value>
+  </data>
+  <data name="PageEditLessonPageChangeDefaultTimes" xml:space="preserve">
+    <value>mudar os tempos padrão</value>
+  </data>
+  <data name="PageInfoPageLanguageWarning" xml:space="preserve">
+    <value>Idiomas do suporte técnico</value>
+  </data>
+  <data name="PageInfoPageLanguageWarningTitle" xml:space="preserve">
+    <value>Gostaríamos muito de ouvir a suas dúvidas e sugestões para esta aplicação, neste momento apenas disponibilizamos suporte técnico por email em inglês e alemão. Continuar a escrever o email ao suporte técnico?</value>
+  </data>
+  <data name="PageTimetableSettingsSwitchEvenOddWeeks" xml:space="preserve">
+    <value>trocar semanas pares e impares</value>
+  </data>
+  <data name="PageTimetableSettingsSwitchEvenOddWeeksWarning" xml:space="preserve">
+    <value>Semanas pares e impares trocadas corretamente!</value>
+  </data>
+  <data name="PageEditSubjectColor" xml:space="preserve">
+    <value>cor</value>
+  </data>
+  <data name="PageEditSubjectIsCustomColor" xml:space="preserve">
+    <value>usar cor personalizada</value>
+  </data>
+  <data name="ContextMenuRename" xml:space="preserve">
+    <value>renomear</value>
+  </data>
+  <data name="PageEditLessonEditSubject" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="MessageDialogCancel" xml:space="preserve">
+    <value>quebrar</value>
+  </data>
+  <data name="MessageDialogOK" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="ApplicationBarLiveTile" xml:space="preserve">
+    <value>Live Tile</value>
+  </data>
+  <data name="ApplicationBarImport" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="ContextMenuExport" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="TimetableIOImportError" xml:space="preserve">
+    <value>Não foi possível importar o XML-arquivo selecionado.</value>
+  </data>
+  <data name="TimetableIOExportError" xml:space="preserve">
+    <value>Não foi possível exportar arquivo.</value>
+  </data>
+  <data name="OpenSourceLookAt" xml:space="preserve">
+    <value>open link</value>
+  </data>
+  <data name="OpenSourceMessage" xml:space="preserve">
+    <value>{0} is now an open source project and free in the store. I am afraid I do not have enough time myself to keep making updates for this app. So if you want to have a look at the code or maybe even write new features, here is the link to the project {1}.</value>
+  </data>
+</root>
